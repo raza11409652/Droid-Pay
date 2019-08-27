@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterAccount">
+    <androidx.appcompat.widget.Toolbar
+        android:textAlignment="center"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        />
+    <TextView
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="@string/create_Account_txt"
+        android:padding="@dimen/padding_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:padding="@dimen/parent_layout_padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/name"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawablePadding="@dimen/padding_4"
+            android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+            android:inputType="textPersonName"
+            android:hint="@string/name_hint"
+            android:background="@drawable/bg_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/email"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawablePadding="@dimen/padding_4"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="@dimen/margin_top"
+            android:background="@drawable/bg_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/mobile"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+            android:drawablePadding="@dimen/padding_4"
+            android:inputType="number"
+            android:hint="@string/mobile_hint"
+            android:layout_marginTop="@dimen/margin_top"
+            android:background="@drawable/bg_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+<EditText
+    android:id="@+id/password"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:drawablePadding="@dimen/padding_4"
+            android:inputType="textPassword"
+            android:hint="@string/password_hint"
+            android:layout_marginTop="@dimen/margin_top"
+            android:background="@drawable/bg_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_margin="@dimen/margin_top"
+            android:textColor="@color/white"
+            android:text="@string/register"
+            android:background="@drawable/btn"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_marginTop="@dimen/margin_top"
+            android:theme="@style/FlatButton"
+            android:text="@string/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

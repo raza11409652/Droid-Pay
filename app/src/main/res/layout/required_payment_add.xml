@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    android:paddingBottom="@dimen/parent_layout_padding"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+
+    >
+    <RelativeLayout
+        android:background="@color/danger_grad_end"
+        android:layout_width="match_parent"
+        android:layout_height="60sp">
+        <TextView
+            android:padding="@dimen/size_12"
+            android:id="@+id/requiredMoneyText"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/required_money"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginTop="@dimen/size_32"
+        android:src="@drawable/rs_sub"
+        android:layout_gravity="center"
+        android:layout_width="180sp"
+        android:layout_height="180sp" />
+    <TextView
+        android:layout_marginTop="@dimen/margin_top"
+        android:id="@+id/amount_to_be_added"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:text="@string/required_money"
+        android:layout_marginBottom="@dimen/size_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/requiredMoneyBtn"
+        android:theme="@style/AccentBtn"
+        android:text="@string/add_now"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/loader"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

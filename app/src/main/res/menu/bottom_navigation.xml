@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/home"></item>
+    <item android:title="@string/scan"
+        android:icon="@drawable/pos"
+        android:id="@+id/scan"></item>
+    <item android:id="@+id/user"
+        android:title="@string/user"
+        android:icon="@drawable/ic_account_circle_black_24dp"></item>
+
+</menu>

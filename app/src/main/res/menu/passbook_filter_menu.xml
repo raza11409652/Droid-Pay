@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/date"
+        app:showAsAction="always"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_date_range_black_24dp"
+        android:title="@string/valid_date">
+
+    </item>
+    <item android:id="@+id/reload"
+        app:showAsAction="always"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_autorenew_black_24dp"
+        android:title="@string/add"></item>
+</menu>

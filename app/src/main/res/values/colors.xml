@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#70994B</color>
+    <color name="colorPrimaryDark">#70994B</color>
+    <color name="colorAccent">#ed1250</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#70884B</color>
+    <color name="secondary">#456E3F</color>
+    <color name="grey">#ddd</color>
+    <color name="danger_grad_start">#ed1250</color>
+    <color name="danger_grad_end">#ef4b4b</color>
+    <color name="black">#222222</color>
+    <color name="success_green">#A6D07E</color>
+    <color name="success_green_back">#78BD3D</color>
+</resources>

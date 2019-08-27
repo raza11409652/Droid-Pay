@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    app:cardElevation="@dimen/size_2"
+    android:layout_height="wrap_content">
+   <LinearLayout
+       android:padding="@dimen/parent_layout_padding"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:id="@+id/trns_type_img"
+               android:layout_gravity="start"
+               android:layout_width="64sp"
+               android:layout_height="64sp"
+               android:src="@drawable/rupees_add"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@id/trns_type_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/trans_date"
+                            android:layout_marginLeft="@dimen/size_6"
+                            android:layout_weight="1"
+                            android:text="@string/valid_date"
+                            android:textStyle="normal"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textStyle="bold"
+                            android:id="@+id/trans_amount"
+                            android:textAlignment="viewEnd"
+                            android:layout_centerVertical="true"
+                            android:text="@string/type_payment"
+
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="0sp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginLeft="@dimen/size_6"
+                        android:id="@+id/src"
+                        android:padding="@dimen/padding_2"
+                        android:text="src"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginLeft="@dimen/size_6"
+                        android:id="@+id/uid"
+                        android:padding="@dimen/padding_2"
+                        android:text="UID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+       </RelativeLayout>
+   </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <stroke android:color="@color/danger_grad_end"
+        android:dashGap="1sp"
+        android:width="1sp"
+        ></stroke>
+    <solid android:color="@color/danger_grad_end"></solid>
+    <corners android:radius="@dimen/size_4"></corners>
+    <padding android:bottom="@dimen/padding_8" android:top="@dimen/padding_8"
+        android:left="@dimen/padding_8"
+        android:right="@dimen/padding_8"></padding>
+</shape>

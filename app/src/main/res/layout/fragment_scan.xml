@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.ScanFrag">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/bg_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:drawableTint="@color/colorPrimaryDark"
+                android:drawablePadding="@dimen/size_2"
+                android:drawableStart="@drawable/ic_phone_android_black_24dp"
+                android:layout_marginTop="@dimen/size_32"
+                android:id="@+id/recieverMobileNumber"
+                android:inputType="number"
+                android:background="@drawable/bg_input"
+                android:hint="@string/mobile_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/payBtn"
+                android:text="@string/pay"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_top"
+                android:theme="@style/whiteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_marginTop="@dimen/margin_top"
+        android:textSize="@dimen/size_32"
+        android:text="OR"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:id="@+id/scanBtn"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/qrcode"
+        android:layout_width="80sp"
+        android:layout_height="80sp" />
+    <TextView
+        android:textColor="@color/danger_grad_end"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textAlignment="center"
+        android:text="@string/tap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

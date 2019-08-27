@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CardRegistration">
+    <androidx.appcompat.widget.Toolbar
+        android:textAlignment="center"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        />
+    <ImageView
+        android:layout_marginTop="@dimen/margin_top"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rfid"
+        android:layout_width="match_parent"
+        android:layout_height="200sp" />
+    <TextView
+        android:padding="@dimen/padding_4"
+        android:textSize="@dimen/size_20"
+        android:textAlignment="center"
+        android:text="Please place Your Rfid card at RFID Reader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

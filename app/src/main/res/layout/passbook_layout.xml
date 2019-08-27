@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+    <androidx.cardview.widget.CardView
+        app:cardElevation="@dimen/size_6"
+        android:layout_margin="@dimen/margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:background="@drawable/bg_card_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/success_green"
+                android:id="@+id/amountHint"
+                android:textAlignment="center"
+                android:text="@string/balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/amount"
+                android:drawableTint="@color/success_green"
+                android:textColor="@color/success_green"
+                android:layout_marginTop="@dimen/size_6"
+                android:layout_below="@id/amountHint"
+                android:textStyle="bold"
+                android:textSize="@dimen/size_18"
+                android:drawablePadding="@dimen/size_2"
+                android:drawableStart="@drawable/inr"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <include layout="@layout/no_payment_found"></include>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

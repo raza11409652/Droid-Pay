@@ -1,0 +1,128 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/margin_top"
+        app:cardUseCompatPadding="true"
+        android:clipToPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingBottom="@dimen/size_16"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/droidpaylogo"
+                    android:layout_weight="1"
+                    android:layout_width="0sp"
+                    android:scaleType="centerInside"
+                    android:layout_height="64sp" />
+                <RelativeLayout
+                    android:layout_weight="2"
+                    android:layout_width="0sp"
+                    android:layout_height="64sp">
+                    <Switch
+                        android:id="@+id/cardStatus"
+                        android:checked="true"
+                        android:layout_marginTop="@dimen/size_4"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/cardNumber"
+                android:layout_marginTop="@dimen/margin_top"
+                android:textAlignment="center"
+                android:textSize="@dimen/size_32"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:text="@string/card_number"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_top" />
+            <LinearLayout
+                android:layout_margin="@dimen/size_4"
+                android:padding="@dimen/padding_4"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/userProfileName"
+                    android:text="@string/user_name"
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/cardStartDate"
+                    android:textAlignment="center"
+                    android:text="@string/valid_date"
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:padding="@dimen/parent_layout_padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textAlignment="textStart"
+            android:id="@+id/changePin"
+            android:theme="@style/WhiteFlatButton"
+            android:text="@string/changePin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start" />
+        <Button
+            android:textAlignment="textStart"
+            android:id="@+id/generatePin"
+            android:theme="@style/WhiteFlatButton"
+            android:text="@string/genratePin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:text="@string/alert"
+            android:id="@+id/alertCard"
+            android:layout_margin="@dimen/margin_top"
+            android:background="@drawable/alert_danger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <!--TextView
+        android:id="@+id/dateSelectorText"
+        android:background="@drawable/chip_grey"
+        android:text="@string/valid_date"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /-->
+    <!-- include bottom sheet -->
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="80dp"
+    android:paddingBottom="@dimen/parent_layout_padding"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    >
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/alert_danger"
+        android:padding="@dimen/padding_12"
+       >
+        <TextView
+            android:textSize="@dimen/size_24"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:text="@string/changePinhint"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/closeBottomSheet"
+            android:layout_gravity="center"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            android:theme="@style/whiteBtn"
+            android:text="close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:maxLength="4"
+        android:id="@+id/oldPinInput"
+        android:inputType="numberPassword"
+        android:hint="@string/changePinold"
+        android:background="@drawable/ref_input"
+        android:layout_margin="@dimen/margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <requestFocus/>
+    </EditText>
+
+
+    <EditText
+        android:maxLength="4"
+        android:id="@+id/newPinInput"
+        android:inputType="numberPassword"
+        android:hint="@string/changePinnew"
+        android:background="@drawable/ref_input"
+        android:layout_margin="@dimen/margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/changePinBtn"
+        android:layout_gravity="center"
+        android:text="@string/changePin"
+        android:textColor="@color/white"
+        android:background="@drawable/btn"
+        android:layout_margin="@dimen/margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

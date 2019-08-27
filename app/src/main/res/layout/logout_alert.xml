@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textStyle="bold"
+        android:textSize="@dimen/size_16"
+        android:textColor="@color/white"
+        android:text="@string/logout_hint"
+        android:padding="@dimen/parent_layout_padding"
+        android:background="@color/danger_grad_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:scaleType="fitCenter"
+        android:src="@drawable/logout"
+        android:layout_marginTop="@dimen/size_32"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_18"
+        android:textStyle="bold"
+        android:text="@string/logout_hint_Alert"
+        android:layout_marginTop="@dimen/size_32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

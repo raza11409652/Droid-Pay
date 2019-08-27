@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hackdroid.droidpay">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".UpdateProfile"
+            android:theme="@style/noActionBar"
+            android:parentActivityName=".Dash"></activity>
+        <activity
+            android:name=".TrnasferSuccess"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".Passbook"
+            android:parentActivityName=".Dash"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".SuccessAddWallet"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".PaymentHandler"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".BarCodeCapture"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".QrProfile"
+            android:parentActivityName=".Dash"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".CardActivity"
+            android:parentActivityName=".Dash"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".PaymentSelector"
+            android:parentActivityName=".AddMoney"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".OtpVerify"
+            android:parentActivityName=".RegisterAccount"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".PaymentActivity"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".CardRegistration"
+            android:parentActivityName=".RegisterAccount"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".RegisterAccount"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".AddMoney"
+            android:parentActivityName=".Dash"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".Dash"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_AsT52PlUojvWCK" />
+    </application>
+
+</manifest>
