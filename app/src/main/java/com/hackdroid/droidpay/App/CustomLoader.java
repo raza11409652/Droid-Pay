@@ -42,7 +42,8 @@ public class CustomLoader extends AppCompatActivity {
         textView.setText(""+str);
         alert.setView(view);
         alert.setCancelable(false) ;
-       alertDialog  = alert.create() ;
+        alertDialog  = alert.create() ;
+        //alertDialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_input);
         alertDialog.show();
     }
     public  void closeLoader(){
