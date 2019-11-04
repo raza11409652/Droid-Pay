@@ -22,4 +22,5 @@
         app:menu="@menu/bottom_navigation">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 </RelativeLayout>

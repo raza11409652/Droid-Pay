@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -58,6 +59,8 @@ Button closeBottomSheet , changePinBtn  ,generatePin ;
 AlertDialog.Builder showNewPinAlert ;
 AlertDialog alertDialogShoNewPin;
     BottomSheetBehavior bottomSheetBehavior ;
+    LinearLayout cardLayout , newCard ;
+    Button addCardBtn ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +75,7 @@ AlertDialog alertDialogShoNewPin;
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             // toolbar.setTitle("Manage Booking");
         }
+        cardLayout = findViewById(R.id.cardLayout) ;
         sessionManager = new SessionManager(getApplicationContext());
         userMobile =sessionManager.getLoggedInMobile() ;
         cardStatus = findViewById(R.id.cardStatus);
@@ -101,7 +105,24 @@ AlertDialog alertDialogShoNewPin;
        // bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
      //   bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+        newCard = findViewById(R.id.newCard) ;
+        addCardBtn = findViewById(R.id.addCardBtn) ;
+       if(Constant.currentCardUid == null || Constant.currentCardUid == "null"){
+//           Toast.makeText(getApplicationContext() , Constant.currentCardUid , Toast.LENGTH_SHORT).show();
+//           Toast.makeText(getApplicationContext() , "No Card Associated"  , Toast.LENGTH_SHORT).show();
+            cardLayout.setVisibility(View.GONE);
+            newCard.setVisibility(View.VISIBLE);
+       }
+        addCardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cardREg = new Intent(getApplicationContext() , CardRegistration.class);
 
+                Constant.currentMobile  = userMobile ;
+                cardREg.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(cardREg);
+            }
+        });
 // set the peek height
        // bottomSheetBehavior.setPeekHeight(120);
 

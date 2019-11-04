@@ -57,7 +57,7 @@
             android:theme="@style/noActionBar" />
         <activity
             android:name=".CardRegistration"
-            android:parentActivityName=".RegisterAccount"
+            android:parentActivityName=".Dash"
             android:theme="@style/noActionBar" />
         <activity
             android:name=".RegisterAccount"

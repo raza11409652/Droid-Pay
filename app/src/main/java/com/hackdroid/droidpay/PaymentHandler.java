@@ -68,6 +68,7 @@ String userMobile , transactionUid , transactionSrc ;
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext() , "Can't connect to server"  , Toast.LENGTH_SHORT) ;
 
             }
         }){

@@ -1,7 +1,7 @@
 package com.hackdroid.droidpay.App;
 
 public class Server {
-    public  final static  String SERVER_URL = "SERVER_API_FOLDER/";
+    public  final static  String SERVER_URL = "http://luggagepark.in/droid_pay/api/v1/";
     public final static  String LOGIN = SERVER_URL + "Login.php";
     public final  static  String REGISTER = SERVER_URL+"Register.php";
     public final  static  String OTP_VERIFY = SERVER_URL +"OtpVerify.php";

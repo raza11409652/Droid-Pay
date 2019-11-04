@@ -73,4 +73,5 @@
     <string name="email_hint_y">Your Email</string>
     <string name="name_hint_y">Your email</string>
     <string name="name_hint_yo">Your Name</string>
+    <string name="newCard">Add Card</string>
 </resources>

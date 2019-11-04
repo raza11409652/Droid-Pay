@@ -72,7 +72,10 @@ public class CardRegistration extends AppCompatActivity {
                         flashbar =  primaryActionListener(""+msg);
                         flashbar.show();
                     }else{
-                        ActivateUser(mobile);
+//                        ActivateUser(mobile);
+                        Intent intent = new Intent(getApplicationContext() , CardActivity.class) ;
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP) ;
+                        startActivity(intent);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -81,6 +84,7 @@ public class CardRegistration extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext() , "Can't connect to server"  , Toast.LENGTH_SHORT) ;
 
             }
         }){

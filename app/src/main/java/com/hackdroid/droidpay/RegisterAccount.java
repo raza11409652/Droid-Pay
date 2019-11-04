@@ -143,7 +143,9 @@ ProgressDialog progressDialog ;
             @Override
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
-                Toast.makeText(getApplicationContext()  , ""+error , Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext() , "Can't connect to server"  , Toast.LENGTH_SHORT) ;
+
+//                Toast.makeText(getApplicationContext()  , ""+error , Toast.LENGTH_SHORT).show();
             }
         }){
             @Override

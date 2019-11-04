@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.andrognito.flashbar.Flashbar;
 import com.android.volley.AuthFailureError;
@@ -26,6 +27,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.hackdroid.droidpay.App.Constant;
 import com.hackdroid.droidpay.App.Server;
+import com.hackdroid.droidpay.App.SessionManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,6 +43,7 @@ Button otpVerify  ;
 String otp ;
 ProgressDialog progressDialog ;
 Flashbar flashbar =null ;
+SessionManager sessionManager ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +57,7 @@ Flashbar flashbar =null ;
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             // toolbar.setTitle("Manage Booking");
         }
+       sessionManager =  new SessionManager(getApplicationContext()) ;
         setTitle(getString(R.string.otp_verify));
         progressDialog = new ProgressDialog(this);
         progressDialog.setCanceledOnTouchOutside(false);
@@ -94,10 +98,15 @@ Flashbar flashbar =null ;
                     JSONObject jsonObject = new JSONObject(response);
                     Boolean error = jsonObject.getBoolean("error");
                     if(error == false){
-                        Intent cardRegistration  = new Intent(getApplicationContext() , CardRegistration.class);
-                       Constant.currentMobile  = currentMobile ;
-                        cardRegistration.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(cardRegistration);
+                        String username = jsonObject.getString("username") ;
+                        Intent cardRegistration  = new Intent(getApplicationContext() ,Dash.class);
+                         Constant.currentMobile  = currentMobile ;
+                         sessionManager.setLogin(true);
+                         sessionManager.setLoginMobile(currentMobile);
+                         sessionManager.setLoginuser(username);
+                         Constant.WALLET_AMOUNT = "0";
+                            cardRegistration.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(cardRegistration);
                     }else{
                         String errorMsg = jsonObject.getString("msg");
                         flashbar = showAlert( "OTP Error "+errorMsg, "Warning") ;
@@ -111,6 +120,7 @@ Flashbar flashbar =null ;
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext() , "Can't connect to server"  , Toast.LENGTH_SHORT) ;
 
             }
         }){

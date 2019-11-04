@@ -186,7 +186,8 @@ CustomLoader customLoader ;
             public void onErrorResponse(VolleyError error) {
                 progressDialog.dismiss();
                 error.printStackTrace();
-                Toast.makeText(getApplicationContext()  , ""+error.getLocalizedMessage() , Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext() , "Can't connect to server"  , Toast.LENGTH_SHORT).show(); ;
+    //                Toast.makeText(getApplicationContext()  , ""+error.getLocalizedMessage() , Toast.LENGTH_SHORT).show();
 
             }
         }){

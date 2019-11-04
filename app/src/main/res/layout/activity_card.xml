@@ -10,7 +10,36 @@
     <!-- include app bar -->
     <include layout="@layout/appbar" />
 
-    <include layout="@layout/card"/>
+    <LinearLayout
+        android:id="@+id/cardLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/card"/>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:padding="@dimen/parent_layout_padding"
+        android:layout_marginTop="@dimen/size_132"
+        android:orientation="vertical"
+        android:id="@+id/newCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/rfid"
+            android:layout_width="180sp"
+            android:layout_height="180sp"></ImageView>
+        <Button
+            android:textColor="@color/white"
+            android:id="@+id/addCardBtn"
+            android:background="@drawable/red_btn"
+            android:text="@string/newCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
     <include layout="@layout/pinchangeprompt">
 
     </include>
