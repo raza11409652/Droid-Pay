@@ -97,7 +97,8 @@ public class Passbook extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
             transactions     = new ArrayList<>();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.TRANSACTION, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                Server.TRANSACTION, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.d("res"  ,response);
